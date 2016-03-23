@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPageViewControllerDataSource{
+class ViewController: UIViewController{
     
     var pageImages: NSArray!
     var pageViewController: UIPageViewController!
@@ -24,20 +24,6 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
         // Dispose of any resources that can be recreated.
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        
-        var viewController = viewController as! TheLastViewController
-        var index = viewController.pageIndex as Int
-        
-        if(index == 0 || index == NSNotFound){
-            return nil
-        }
-        index --
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        <#code#>
-    }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return pageImages.count
