@@ -17,7 +17,7 @@ class TheLastViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
     
     var imageFileName: String!
-    var pageIndex:Int!
+    var pageIndex: Int!
     
 
     override func viewDidLoad() {
