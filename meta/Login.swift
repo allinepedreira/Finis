@@ -58,7 +58,6 @@ class Login: UIViewController {
         {
             if text1.text != user2.email
             {
-                // uerrado.hidden=false
                 
                 let alert1 = UIAlertController(title: "My Title", message: "Invalid email", preferredStyle: UIAlertControllerStyle.Alert)
                 
@@ -74,8 +73,6 @@ class Login: UIViewController {
             {
                 if text2.text != user2.password
                 {
-                    // errado.hidden=false
-                    // uerrado.hidden=true
                     
                     
                     let alert2 = UIAlertController(title: "My Title", message: "Invalid Password", preferredStyle: UIAlertControllerStyle.Alert)
