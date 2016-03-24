@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j8e-bE-bfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j8e-bE-bfh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Montserrat-Light.otf">
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fh-gp-D3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="2473"/>
+            <point key="canvasLocation" x="1221" y="2514"/>
         </scene>
         <!--The Next View Controller-->
         <scene sceneID="A2z-8H-qcG">
@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcW-iF-P5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-195" y="221"/>
+            <point key="canvasLocation" x="-318" y="221"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="l1V-6G-yHT">
@@ -65,7 +65,7 @@
                 <pageViewController storyboardIdentifier="MyPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="GzB-eH-TSu" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOq-wC-zEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="221"/>
+            <point key="canvasLocation" x="516" y="221"/>
         </scene>
         <!--The Last View Controller-->
         <scene sceneID="iIZ-22-Tnc">
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ko-cj-urt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="993"/>
+            <point key="canvasLocation" x="-291" y="947"/>
         </scene>
         <!--Register-->
         <scene sceneID="X10-Ii-uZq">
@@ -208,6 +208,16 @@
                                     <action selector="signup:" destination="hVc-wu-zdX" eventType="touchUpInside" id="zpf-Xc-iu7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L3-5H-grm">
+                                <rect key="frame" x="161" y="477" width="55" height="30"/>
+                                <state key="normal" title="REGISTER"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="435" width="70" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signUp:" destination="hVc-wu-zdX" eventType="touchUpInside" id="jqb-KX-fnP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -215,6 +225,7 @@
                                 <exclude reference="rBO-dK-3U5"/>
                                 <exclude reference="SGO-Dd-wRx"/>
                                 <exclude reference="EdY-Ji-Rbw"/>
+                                <exclude reference="4L3-5H-grm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -222,6 +233,7 @@
                                 <include reference="rBO-dK-3U5"/>
                                 <include reference="SGO-Dd-wRx"/>
                                 <include reference="EdY-Ji-Rbw"/>
+                                <include reference="4L3-5H-grm"/>
                             </mask>
                         </variation>
                     </view>
@@ -236,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laq-G5-E4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="709"/>
+            <point key="canvasLocation" x="1287" y="947"/>
         </scene>
         <!--Login-->
         <scene sceneID="eFz-fU-tGE">
@@ -380,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yt-bo-5WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676.5" y="1737"/>
+            <point key="canvasLocation" x="369" y="1729"/>
         </scene>
         <!--Start Screen-->
         <scene sceneID="fUr-7Z-set">
@@ -430,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxI-D4-L8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="1572"/>
+            <point key="canvasLocation" x="1842" y="1729"/>
         </scene>
     </scenes>
     <resources>
@@ -440,7 +452,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9na-ls-78O"/>
-        <segue reference="n8D-fa-uzj"/>
-        <segue reference="18t-TS-8as"/>
+        <segue reference="3U6-bm-VZX"/>
+        <segue reference="QqT-tu-zjH"/>
     </inferredMetricsTieBreakers>
 </document>

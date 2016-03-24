@@ -20,20 +20,23 @@ class Login: UIViewController {
     let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
     var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback2")
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         text1.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
         text2.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
-
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     
     }
     
+    
     //MARK: Processamentos
+    
     
     @IBAction func login(sender: AnyObject) {
         if shouldPerformSegueWithIdentifier("start", sender:self) == true {
@@ -41,56 +44,54 @@ class Login: UIViewController {
         }
     }
     
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "register" {
             performSegueWithIdentifier("register", sender: self)
+            
         } else {
             if identifier == "back" {
                 performSegueWithIdentifier("back", sender: self)
-            }
-            else {
-        if (text1.text!.isEmpty||text2.text!.isEmpty) {
-            
-            let alert = UIAlertController(title: "Error", message: "Please insert your email address and password.", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
-            // show the alert
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-        else {
-        if identifier == "start" {
-            print("cu")
-            if text1.text != user2.email {
                 
-                let alert1 = UIAlertController(title: "Error", message: "Your email address is not registered.", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                // add an action (button)
-                alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                
-                // show the alert
-                self.presentViewController(alert1, animated: true, completion: nil)
-                
-                return false
             } else {
-                if text2.text != user2.password {
-                    
-                    
-                    let alert2 = UIAlertController(title: "Please try again", message: "This email and password do not match.", preferredStyle: UIAlertControllerStyle.Alert)
-                    
+                if (text1.text!.isEmpty||text2.text!.isEmpty) {
+                    let alert = UIAlertController(title: "Error", message: "Please insert your email address and password.", preferredStyle: UIAlertControllerStyle.Alert)
+            
                     // add an action (button)
-                    alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                    
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
                     // show the alert
-                    self.presentViewController(alert2, animated: true, completion: nil)
+                    self.presentViewController(alert, animated: true, completion: nil)
                     
-                    return false
-                }
-                else
-                {
-                    return true
-                }
+                } else {
+                    if identifier == "start" {
+                        print("cu")
+                        
+                        if text1.text != user2.email {
+                            let alert1 = UIAlertController(title: "Error", message: "Your email address is not registered.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                            // add an action (button)
+                            alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                
+                            // show the alert
+                            self.presentViewController(alert1, animated: true, completion: nil)
+                
+                            return false
+                            
+                        } else {
+                                if text2.text != user2.password {
+                                        let alert2 = UIAlertController(title: "Please try again", message: "This email and password do not match.", preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                                        // add an action (button)
+                                        alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    
+                                        // show the alert
+                                        self.presentViewController(alert2, animated: true, completion: nil)
+                                        return false
+                                    
+                                } else {
+                                        return true
+                                        }
             }
             
         }

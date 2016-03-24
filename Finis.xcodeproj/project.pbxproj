@@ -57,6 +57,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246566C61CA4921B003BECE4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				541FFAA01CA45755000D1B79 /* Montserrat-Hairline.otf */,
+				541FFAA11CA45755000D1B79 /* Montserrat-Light.otf */,
+				541FFAA21CA45755000D1B79 /* Montserrat-Regular.otf */,
+				541FFAA31CA45755000D1B79 /* Montserrat-SemiBold.otf */,
+				541FFAA41CA45755000D1B79 /* Montserrat-UltraLight.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		56F6E85F1CA05ED00093477E = {
 			isa = PBXGroup;
 			children = (
@@ -79,11 +91,7 @@
 				56F6E86B1CA05ED00093477E /* AppDelegate.swift */,
 				56F6E86F1CA05ED00093477E /* Main.storyboard */,
 				56F6E8721CA05ED00093477E /* Assets.xcassets */,
-				541FFAA01CA45755000D1B79 /* Montserrat-Hairline.otf */,
-				541FFAA11CA45755000D1B79 /* Montserrat-Light.otf */,
-				541FFAA21CA45755000D1B79 /* Montserrat-Regular.otf */,
-				541FFAA31CA45755000D1B79 /* Montserrat-SemiBold.otf */,
-				541FFAA41CA45755000D1B79 /* Montserrat-UltraLight.otf */,
+				246566C61CA4921B003BECE4 /* Fonts */,
 				56F6E8741CA05ED00093477E /* LaunchScreen.storyboard */,
 				56F6E8771CA05ED00093477E /* Info.plist */,
 				56F6E87D1CA082860093477E /* User.swift */,
