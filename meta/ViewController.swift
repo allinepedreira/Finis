@@ -26,8 +26,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyPageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
-        var initialContentView = self.pageLastAtIndex(0) as TheLastViewController
-        var viewControllers = NSArray(object: initialContentView)
+        let initialContentView = self.pageLastAtIndex(0) as TheLastViewController
+        let viewControllers = NSArray(object: initialContentView)
         self.pageViewController.setViewControllers(viewControllers as! [UIViewController] , direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
         // self.pageViewController.view.frame = CGRectMake(0,100, self.view.frame.size.width, self.view.frame.size.height)
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func pageLastAtIndex(index: Int) -> TheLastViewController{
-        var pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TheLastViewController") as! TheLastViewController
+        let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TheLastViewController") as! TheLastViewController
         
         pageContentViewController.imageFileName = pageImages[index] as! String
         pageContentViewController.pageIndex = index
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var viewController = viewController as! TheLastViewController
+        let viewController = viewController as! TheLastViewController
         var index = viewController.pageIndex as Int
         
         if( index == 0 || index == NSNotFound){
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var viewController = viewController as! TheLastViewController
+        let viewController = viewController as! TheLastViewController
         var index = viewController.pageIndex as Int
         
         if(index == NSNotFound)

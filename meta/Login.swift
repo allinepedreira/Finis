@@ -18,9 +18,7 @@ class Login: UIViewController {
     
     // Fazer aparecer imagens para o background aleatoriamente
     let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
-  
-    
-    var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback")
+    var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback2")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +44,8 @@ class Login: UIViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "register" {
             performSegueWithIdentifier("register", sender: self)
-        }
-        else {
-            if identifier == "back"{
+        } else {
+            if identifier == "back" {
                 performSegueWithIdentifier("back", sender: self)
             }
             else {
@@ -63,9 +60,8 @@ class Login: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else {
-
-        
         if identifier == "start" {
+            print("cu")
             if text1.text != user2.email {
                 
                 let alert1 = UIAlertController(title: "Error", message: "Your email address is not registered.", preferredStyle: UIAlertControllerStyle.Alert)
