@@ -12,8 +12,13 @@ class Login: UIViewController {
     
     
     @IBOutlet weak var text1: UITextField!
- 
     @IBOutlet weak var text2: UITextField!
+    @IBOutlet var background: UIImageView!
+
+    
+    // Fazer aparecer imagens para o background aleatoriamente
+    let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
+  
     
     var user2: User!
     
@@ -30,20 +35,16 @@ class Login: UIViewController {
     
     }
     
-    
-    
+    //MARK: Processamentos
     
     @IBAction func login(sender: AnyObject) {
-        if shouldPerformSegueWithIdentifier("start", sender:self) == true
-        {
+        if shouldPerformSegueWithIdentifier("start", sender:self) == true {
             performSegueWithIdentifier("start" ,sender: self)
         }
-
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
-    {
-        if identifier == "register"{
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "register" {
             performSegueWithIdentifier("register", sender: self)
         }
         else {
@@ -64,10 +65,8 @@ class Login: UIViewController {
         else {
 
         
-        if identifier == "start"
-        {
-            if text1.text != user2.email
-            {
+        if identifier == "start" {
+            if text1.text != user2.email {
                 
                 let alert1 = UIAlertController(title: "Error", message: "Your email address is not registered.", preferredStyle: UIAlertControllerStyle.Alert)
                 
@@ -78,11 +77,8 @@ class Login: UIViewController {
                 self.presentViewController(alert1, animated: true, completion: nil)
                 
                 return false
-            }
-            else
-            {
-                if text2.text != user2.password
-                {
+            } else {
+                if text2.text != user2.password {
                     
                     
                     let alert2 = UIAlertController(title: "Please try again", message: "This email and password do not match.", preferredStyle: UIAlertControllerStyle.Alert)
