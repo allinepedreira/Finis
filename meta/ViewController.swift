@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, UIPageViewControllerDataSource {
     
-    // var pageImages: NSArray!
-    
+    var pageImages: NSArray!
     var pageViewController: UIPageViewController!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // pageImages = NSArray(objects: "screen1","screen2","screen3")
+        pageImages = NSArray(objects: "image1","image2","image3")
         let pageControl = UIPageControl.init(frame: CGRectMake(0, UIScreen.mainScreen().bounds.size.height*14/15, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height))
         pageControl.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height+40)
         pageControl.backgroundColor = UIColor(red: 49.0/255, green: 175.0/255, blue: 126.0/255, alpha: 1.0)
@@ -45,6 +45,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     func pageLastAtIndex(index: Int) -> TheLastViewController{
         var pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TheLastViewController") as! TheLastViewController
+        
+        pageContentViewController.imageFileName = pageImages[index] as! String
         pageContentViewController.pageIndex = index
         
         return pageContentViewController
@@ -87,7 +89,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 3
+        return pageImages.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

@@ -10,6 +10,11 @@ import UIKit
 
 class TheLastViewController: UIViewController {
     
+    
+    @IBOutlet weak var myImageView: UIImageView!
+    
+    
+    var imageFileName: String!
     var pageIndex:Int!
     
 
@@ -17,6 +22,9 @@ class TheLastViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(red: 49.0/255, green: 175.0/255, blue: 126.0/255, alpha: 1.0)
+        myImageView.backgroundColor = UIColor(red: 49.0/255, green: 175.0/255, blue: 126.0/255, alpha: 1.0)
+        
+        myImageView.image = UIImage(named: imageFileName)
         
 
         // Do any additional setup after loading the view.
