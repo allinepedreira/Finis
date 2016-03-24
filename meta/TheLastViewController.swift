@@ -14,6 +14,8 @@ class TheLastViewController: UIViewController {
     @IBOutlet weak var myImageView: UIImageView!
     
     
+    @IBOutlet weak var myLabel: UILabel!
+    
     var imageFileName: String!
     var pageIndex:Int!
     
