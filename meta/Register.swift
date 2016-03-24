@@ -60,7 +60,7 @@ class Register: UIViewController {
         
         if (namesav!.isEmpty||emailsav!.isEmpty||passwordsav!.isEmpty) {
            
-            let alert = UIAlertController(title: "My Title", message: "Todos os campos são obrigatórios", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Sign up failed", message: "You must fill in all of the fields.", preferredStyle: UIAlertControllerStyle.Alert)
             
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -73,7 +73,7 @@ class Register: UIViewController {
         
         if isValidEmail(email.text!) == false {
             
-            let alert = UIAlertController(title: "My Title", message: "Invalid Email", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Sign up failed", message: "Please enter a valid email address.", preferredStyle: UIAlertControllerStyle.Alert)
             
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -91,7 +91,7 @@ class Register: UIViewController {
         }
         else {
             
-            let alert = UIAlertController(title: "My Title", message: "At least 8 characters", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Sign up failed", message: "Your password must be at least 8 characters long.", preferredStyle: UIAlertControllerStyle.Alert)
             
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))

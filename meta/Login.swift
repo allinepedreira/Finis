@@ -31,6 +31,8 @@ class Login: UIViewController {
     }
     
     
+    
+    
     @IBAction func login(sender: AnyObject) {
         if shouldPerformSegueWithIdentifier("start", sender:self) == true
         {
@@ -41,9 +43,17 @@ class Login: UIViewController {
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
     {
+        if identifier == "register"{
+            performSegueWithIdentifier("register", sender: self)
+        }
+        else {
+            if identifier == "back"{
+                performSegueWithIdentifier("back", sender: self)
+            }
+            else {
         if (text1.text!.isEmpty||text2.text!.isEmpty) {
             
-            let alert = UIAlertController(title: "My Title", message: "Todos os campos são obrigatórios", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Error", message: "Please insert your email address and password.", preferredStyle: UIAlertControllerStyle.Alert)
             
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -59,7 +69,7 @@ class Login: UIViewController {
             if text1.text != user2.email
             {
                 
-                let alert1 = UIAlertController(title: "My Title", message: "Invalid email", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert1 = UIAlertController(title: "Error", message: "Your email address is not registered.", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 // add an action (button)
                 alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -75,7 +85,7 @@ class Login: UIViewController {
                 {
                     
                     
-                    let alert2 = UIAlertController(title: "My Title", message: "Invalid Password", preferredStyle: UIAlertControllerStyle.Alert)
+                    let alert2 = UIAlertController(title: "Please try again", message: "This email and password do not match.", preferredStyle: UIAlertControllerStyle.Alert)
                     
                     // add an action (button)
                     alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -96,6 +106,11 @@ class Login: UIViewController {
     }
         return true
     }
+        return true
+    }
+    return true
+    }
+    
     
 }
     
