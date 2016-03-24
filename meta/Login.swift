@@ -20,7 +20,7 @@ class Login: UIViewController {
     let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
   
     
-    var user2: User!
+    var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback")
     
     override func viewDidLoad() {
         super.viewDidLoad()

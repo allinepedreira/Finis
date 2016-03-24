@@ -13,7 +13,7 @@ class Register: UIViewController {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-       var user: User!
+    var user = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "sdasdas")
     
     override func viewDidLoad() {
         super.viewDidLoad()

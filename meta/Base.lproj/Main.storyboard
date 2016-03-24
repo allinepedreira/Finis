@@ -248,12 +248,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tzA-03-7c7">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nv-Ux-kQx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="LOGIN"/>
@@ -265,14 +259,6 @@
                                     <segue destination="CRZ-Cd-VBv" kind="show" identifier="start" id="LhF-9W-KgC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6B-yi-ZxE">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="20" y="345" width="360" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7g-ES-R33">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -313,48 +299,48 @@
                                     <segue destination="hVc-wu-zdX" kind="show" identifier="register" id="9na-ls-78O"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tzA-03-7c7">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="52" y="289" width="315" height="47"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6B-yi-ZxE">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="52" y="344" width="315" height="47"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tzA-03-7c7" firstAttribute="leading" secondItem="cyJ-h7-tPV" secondAttribute="leading" constant="55" id="29i-Jl-iSl"/>
-                            <constraint firstAttribute="trailing" secondItem="tzA-03-7c7" secondAttribute="trailing" constant="30" id="BvO-KN-xMr"/>
-                            <constraint firstItem="tzA-03-7c7" firstAttribute="top" secondItem="cyJ-h7-tPV" secondAttribute="top" constant="310" id="SA1-0x-POC"/>
-                            <constraint firstItem="z6B-yi-ZxE" firstAttribute="top" secondItem="tzA-03-7c7" secondAttribute="bottom" constant="16" id="qGK-UI-Kdp"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="v5A-Tp-wiS"/>
-                                <exclude reference="tzA-03-7c7"/>
                                 <exclude reference="6nv-Ux-kQx"/>
-                                <exclude reference="z6B-yi-ZxE"/>
                                 <exclude reference="C7g-ES-R33"/>
                                 <exclude reference="nSx-Tl-4ht"/>
                                 <exclude reference="DBY-x6-eSJ"/>
                                 <exclude reference="jyt-28-Hnz"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="29i-Jl-iSl"/>
-                                <exclude reference="BvO-KN-xMr"/>
-                                <exclude reference="SA1-0x-POC"/>
-                                <exclude reference="qGK-UI-Kdp"/>
+                                <exclude reference="tzA-03-7c7"/>
+                                <exclude reference="z6B-yi-ZxE"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="v5A-Tp-wiS"/>
-                                <include reference="tzA-03-7c7"/>
                                 <include reference="6nv-Ux-kQx"/>
-                                <include reference="z6B-yi-ZxE"/>
                                 <include reference="C7g-ES-R33"/>
                                 <include reference="nSx-Tl-4ht"/>
                                 <include reference="DBY-x6-eSJ"/>
                                 <include reference="jyt-28-Hnz"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="29i-Jl-iSl"/>
-                                <include reference="BvO-KN-xMr"/>
-                                <include reference="SA1-0x-POC"/>
-                                <include reference="qGK-UI-Kdp"/>
+                                <include reference="tzA-03-7c7"/>
+                                <include reference="z6B-yi-ZxE"/>
                             </mask>
                         </variation>
                     </view>
