@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j8e-bE-bfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j8e-bE-bfh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Montserrat-Light.otf">
@@ -198,12 +198,6 @@
                                             <outlet property="delegate" destination="hVc-wu-zdX" id="h4O-ZR-fdY"/>
                                         </connections>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-am-K1O">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="135" y="181" width="130" height="130"/>
-                                        </variation>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-wK-t0s">
                                         <rect key="frame" x="20" y="397" width="335" height="30"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="22"/>
@@ -223,7 +217,6 @@
                                         <exclude reference="fsO-Lx-ApT"/>
                                         <exclude reference="HGk-53-0ah"/>
                                         <exclude reference="vTf-V8-ORb"/>
-                                        <exclude reference="yUh-am-K1O"/>
                                         <exclude reference="ybc-wK-t0s"/>
                                     </mask>
                                 </variation>
@@ -235,7 +228,6 @@
                                         <include reference="fsO-Lx-ApT"/>
                                         <include reference="HGk-53-0ah"/>
                                         <include reference="vTf-V8-ORb"/>
-                                        <include reference="yUh-am-K1O"/>
                                         <include reference="ybc-wK-t0s"/>
                                     </mask>
                                 </variation>
@@ -293,7 +285,6 @@
                     <connections>
                         <outlet property="ScrollView" destination="yPk-EC-RHc" id="CyM-CO-lHo"/>
                         <outlet property="email" destination="fsO-Lx-ApT" id="qqn-2R-zIm"/>
-                        <outlet property="imageView" destination="yUh-am-K1O" id="603-mR-BwZ"/>
                         <outlet property="name" destination="vTf-V8-ORb" id="Od8-E3-yrP"/>
                         <outlet property="password" destination="ybc-wK-t0s" id="PwK-VK-fm4"/>
                         <segue destination="JdW-GU-ImP" kind="show" identifier="registercomp" id="3U6-bm-VZX"/>
@@ -406,12 +397,6 @@
                                             <segue destination="hVc-wu-zdX" kind="show" identifier="register" id="9na-ls-78O"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xiX-To-ggv">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="119" y="204" width="130" height="130"/>
-                                        </variation>
-                                    </imageView>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -423,7 +408,6 @@
                                         <exclude reference="tzA-03-7c7"/>
                                         <exclude reference="nSx-Tl-4ht"/>
                                         <exclude reference="jyt-28-Hnz"/>
-                                        <exclude reference="xiX-To-ggv"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES">
@@ -437,7 +421,6 @@
                                         <include reference="tzA-03-7c7"/>
                                         <include reference="nSx-Tl-4ht"/>
                                         <include reference="jyt-28-Hnz"/>
-                                        <include reference="xiX-To-ggv"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -488,7 +471,6 @@
                     <connections>
                         <outlet property="ScrollView" destination="7K5-HC-2dU" id="olr-yf-1Ge"/>
                         <outlet property="background" destination="v5A-Tp-wiS" id="uhs-gA-DIb"/>
-                        <outlet property="imageView" destination="xiX-To-ggv" id="JGR-tr-eEL"/>
                         <outlet property="text1" destination="tzA-03-7c7" id="EbF-AH-hEd"/>
                         <outlet property="text2" destination="z6B-yi-ZxE" id="N68-Y3-n2z"/>
                     </connections>
