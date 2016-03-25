@@ -22,6 +22,7 @@ class Login: UIViewController, UITextFieldDelegate {
     let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
     var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback2")
     
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j8e-bE-bfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j8e-bE-bfh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Montserrat-Light.otf">
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ko-cj-urt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291" y="947"/>
+            <point key="canvasLocation" x="-318" y="931"/>
         </scene>
         <!--Register-->
         <scene sceneID="X10-Ii-uZq">
@@ -187,17 +187,6 @@
                                             <action selector="signUp:" destination="hVc-wu-zdX" eventType="touchUpInside" id="ta1-nJ-8Jq"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-wK-t0s">
-                                        <rect key="frame" x="20" y="397" width="335" height="30"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="28" y="388" width="247" height="50"/>
-                                        </variation>
-                                        <connections>
-                                            <outlet property="delegate" destination="hVc-wu-zdX" id="hvL-P6-iVZ"/>
-                                        </connections>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTf-V8-ORb">
                                         <rect key="frame" x="20" y="226" width="335" height="30"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="22"/>
@@ -215,6 +204,17 @@
                                             <rect key="frame" x="135" y="181" width="130" height="130"/>
                                         </variation>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-wK-t0s">
+                                        <rect key="frame" x="20" y="397" width="335" height="30"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="28" y="388" width="247" height="50"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="hVc-wu-zdX" id="hvL-P6-iVZ"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -222,9 +222,9 @@
                                         <exclude reference="SGO-Dd-wRx"/>
                                         <exclude reference="fsO-Lx-ApT"/>
                                         <exclude reference="HGk-53-0ah"/>
-                                        <exclude reference="ybc-wK-t0s"/>
                                         <exclude reference="vTf-V8-ORb"/>
                                         <exclude reference="yUh-am-K1O"/>
+                                        <exclude reference="ybc-wK-t0s"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES">
@@ -234,9 +234,9 @@
                                         <include reference="SGO-Dd-wRx"/>
                                         <include reference="fsO-Lx-ApT"/>
                                         <include reference="HGk-53-0ah"/>
-                                        <include reference="ybc-wK-t0s"/>
                                         <include reference="vTf-V8-ORb"/>
                                         <include reference="yUh-am-K1O"/>
+                                        <include reference="ybc-wK-t0s"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -301,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laq-G5-E4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1287" y="947"/>
+            <point key="canvasLocation" x="1221" y="951"/>
         </scene>
         <!--Login-->
         <scene sceneID="eFz-fU-tGE">
@@ -349,7 +349,7 @@
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="46" y="359" width="315" height="47"/>
                                         </variation>
@@ -495,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yt-bo-5WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="369" y="1729"/>
+            <point key="canvasLocation" x="369" y="1717"/>
         </scene>
         <!--Start Screen-->
         <scene sceneID="fUr-7Z-set">
@@ -527,18 +527,30 @@
                                     <rect key="frame" x="221" y="234" width="0.0" height="0.0"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-S7-ErE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="buttonAdd"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="161" y="443" width="78" height="75"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonAdd:" destination="CRZ-Cd-VBv" eventType="touchUpInside" id="0Ja-vp-oRF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="4C1-9a-Lbg"/>
                                 <exclude reference="LxG-oa-dsU"/>
+                                <exclude reference="h2s-S7-ErE"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="4C1-9a-Lbg"/>
                                 <include reference="LxG-oa-dsU"/>
+                                <include reference="h2s-S7-ErE"/>
                             </mask>
                         </variation>
                     </view>
@@ -550,6 +562,7 @@
     </scenes>
     <resources>
         <image name="bg1" width="750" height="1334"/>
+        <image name="buttonAdd" width="75" height="75"/>
         <image name="delete" width="30" height="30"/>
         <image name="icon-avatar" width="512" height="512"/>
     </resources>

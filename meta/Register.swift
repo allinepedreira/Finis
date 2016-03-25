@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Register: UIViewController, UITextFieldDelegate{
+class Register: UIViewController, UITextFieldDelegate {
 
  
     @IBOutlet weak var imageView: UIImageView!
@@ -19,24 +19,28 @@ class Register: UIViewController, UITextFieldDelegate{
     
     var user = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "sdasdas")
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-            ScrollView.setContentOffset(CGPoint(x: 0, y: 125), animated: true)
-            }
+        ScrollView.setContentOffset(CGPoint(x: 0, y: 125), animated: true)
+    }
     
     func textFieldDidEndEditing(textField: UITextField) {
         ScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
-    
 
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         
         email.text = String()
         password.text = String()
@@ -64,6 +68,7 @@ class Register: UIViewController, UITextFieldDelegate{
         super.didReceiveMemoryWarning()
     
     }
+   
 
     
     func isValidEmail(testStr: String) -> Bool {
