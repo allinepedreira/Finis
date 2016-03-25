@@ -8,13 +8,30 @@
 
 import UIKit
 
-class Register: UIViewController {
+class Register: UIViewController, UITextFieldDelegate{
 
+ 
+    @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
     var user = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "sdasdas")
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+            ScrollView.setContentOffset(CGPoint(x: 0, y: 125), animated: true)
+            }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+    
+
     
     
     override func viewDidLoad() {
@@ -98,8 +115,8 @@ class Register: UIViewController {
                     }
             }
         }
-    }
     
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "registercomp" {
@@ -107,5 +124,6 @@ class Register: UIViewController {
             destination.user2 = user
         }
     }
+
 
 }

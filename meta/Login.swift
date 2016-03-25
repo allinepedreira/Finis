@@ -8,8 +8,9 @@
 
 import UIKit
 
-class Login: UIViewController {
+class Login: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var ScrollView: UIScrollView!
     
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var text2: UITextField!
@@ -19,6 +20,19 @@ class Login: UIViewController {
     // Fazer aparecer imagens para o background aleatoriamente
     let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
     var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback2")
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0, y: 170), animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
     
     
     override func viewDidLoad() {
