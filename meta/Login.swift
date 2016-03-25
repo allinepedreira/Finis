@@ -12,6 +12,7 @@ class Login: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ScrollView: UIScrollView!
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var text2: UITextField!
     @IBOutlet var background: UIImageView!
@@ -40,6 +41,19 @@ class Login: UIViewController, UITextFieldDelegate {
         
         text1.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
         text2.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
+        
+        imageView.animationImages = [
+        
+            UIImage(named: "image1")!,
+            UIImage(named: "image2")!,
+            UIImage(named: "image3")!
+            
+        ]
+        
+        imageView.animationDuration = 3
+        imageView.startAnimating()
+            
+        
     }
 
     
