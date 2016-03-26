@@ -16,7 +16,7 @@ class Login: UIViewController, UITextFieldDelegate {
     @IBOutlet var background: UIImageView!
 
     
-    // Fazer aparecer imagens para o background aleatoriamente
+    //arthur_Fazer aparecer imagens para o background aleatoriamente
     let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
     var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback2")
     
@@ -38,10 +38,15 @@ class Login: UIViewController, UITextFieldDelegate {
     
     //MARK: Processamentos
     
-    //função para o teclado sumir ao apertar o return do keyboard
+    //arthur_teclado some quando a return key é pressionada
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
+    }
+    
+    //arthur_teclado some quando qualquer lugar da tela é clicado
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     @IBAction func login(sender: AnyObject) {
