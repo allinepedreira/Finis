@@ -23,8 +23,8 @@ class TheLastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red: 49.0/255, green: 175.0/255, blue: 126.0/255, alpha: 1.0)
-        myImageView.backgroundColor = UIColor(red: 49.0/255, green: 175.0/255, blue: 126.0/255, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red: 78.0/255, green: 205.0/255, blue: 196.0/255, alpha: 1.0)
+        myImageView.backgroundColor = UIColor(red: 78.0/255, green: 205.0/255, blue: 196.0/255, alpha: 1.0)
         
         myImageView.image = UIImage(named: imageFileName)
         
