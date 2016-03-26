@@ -10,15 +10,15 @@ import UIKit
 
 class Login: UIViewController, UITextFieldDelegate {
     
-    
+    var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback2")
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var text2: UITextField!
+    var previousRandomIndex = 0
     @IBOutlet var background: UIImageView!
 
-    
-    //arthur_Fazer aparecer imagens para o background aleatoriamente
+    //arthur_array de imagens para serem geradas aleatoriamente no background
     let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
-    var user2 = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "outback2")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,8 @@ class Login: UIViewController, UITextFieldDelegate {
         
         text1.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
         text2.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
+    
+       background.image = UIImage(named: randomImages())
 
     }
 
@@ -37,6 +39,21 @@ class Login: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Processamentos
+    
+    
+    //arthur_Fazer aparecer imagens para o background aleatoriamente
+    func randomImages () -> String {
+        
+        var unsignedArrayCount = UInt32(images.count)
+        var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+        var randomNumber = Int(unsignedRandomNumber)
+        
+        repeat {
+            randomNumber = Int(unsignedRandomNumber)
+        } while randomNumber == previousRandomIndex
+        
+        return images[randomNumber]
+    }
     
     //arthur_teclado some quando a return key é pressionada
     func textFieldShouldReturn(textField: UITextField) -> Bool {

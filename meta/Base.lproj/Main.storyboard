@@ -210,6 +210,12 @@
                                     <action selector="signup:" destination="hVc-wu-zdX" eventType="touchUpInside" id="zpf-Xc-iu7"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="68l-Xt-BW5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -217,6 +223,7 @@
                                 <exclude reference="rBO-dK-3U5"/>
                                 <exclude reference="SGO-Dd-wRx"/>
                                 <exclude reference="EdY-Ji-Rbw"/>
+                                <exclude reference="68l-Xt-BW5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -224,6 +231,7 @@
                                 <include reference="rBO-dK-3U5"/>
                                 <include reference="SGO-Dd-wRx"/>
                                 <include reference="EdY-Ji-Rbw"/>
+                                <include reference="68l-Xt-BW5"/>
                             </mask>
                         </variation>
                     </view>
@@ -238,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laq-G5-E4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="709"/>
+            <point key="canvasLocation" x="1368" y="709"/>
         </scene>
         <!--Login-->
         <scene sceneID="eFz-fU-tGE">
@@ -252,7 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="v5A-Tp-wiS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5A-Tp-wiS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nv-Ux-kQx">
@@ -321,6 +329,9 @@
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="109" y="543" width="146" height="14"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBY-x6-eSJ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -337,6 +348,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="235" y="538" width="75" height="26"/>
+                                </variation>
                                 <connections>
                                     <segue destination="hVc-wu-zdX" kind="show" identifier="register" id="9na-ls-78O"/>
                                 </connections>
@@ -602,7 +616,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="background" destination="v5A-Tp-wiS" id="uhs-gA-DIb"/>
+                        <outlet property="background" destination="v5A-Tp-wiS" id="yeM-pv-Kol"/>
                         <outlet property="text1" destination="tzA-03-7c7" id="EbF-AH-hEd"/>
                         <outlet property="text2" destination="z6B-yi-ZxE" id="N68-Y3-n2z"/>
                     </connections>
@@ -670,8 +684,8 @@
         <image name="icon-password" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="3U6-bm-VZX"/>
         <segue reference="9na-ls-78O"/>
-        <segue reference="n8D-fa-uzj"/>
         <segue reference="18t-TS-8as"/>
     </inferredMetricsTieBreakers>
 </document>
