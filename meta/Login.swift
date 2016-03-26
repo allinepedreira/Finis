@@ -17,7 +17,7 @@ class Login: UIViewController, UITextFieldDelegate {
     @IBOutlet var background: UIImageView!
 
     //arthur_array de imagens para serem geradas aleatoriamente no background
-    let images: [String] = ["bg1", "bg2", "bg3", "bg4", "bg5"]
+    let images: [String] = ["bg1", "bg2", "bg3", "bg4"]
 
     
     override func viewDidLoad() {
@@ -44,8 +44,8 @@ class Login: UIViewController, UITextFieldDelegate {
     //arthur_Fazer aparecer imagens para o background aleatoriamente
     func randomImages () -> String {
         
-        var unsignedArrayCount = UInt32(images.count)
-        var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+        let unsignedArrayCount = UInt32(images.count)
+        let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
         var randomNumber = Int(unsignedRandomNumber)
         
         repeat {
