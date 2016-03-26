@@ -10,14 +10,32 @@ import UIKit
 
 class Register: UIViewController, UITextFieldDelegate {
 
- 
-    
+    @IBOutlet var background: UIImageView!
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-    
     var user = User(name: "Arthur Carvalho", email: "arthurcarvalho@gmail.com", password: "sdasdas")
+
+    //arthur_array do bg
+    var images = ["bg1", "bg2", "bg3", "bg4"]
+    var previousRandomIndex = 0
+    
+    
+    //arthur_background aleatorio
+    func randomImages () -> String {
+        
+        let unsignedArrayCount = UInt32(images.count)
+        let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+        var randomNumber = Int(unsignedRandomNumber)
+        
+        repeat {
+            randomNumber = Int(unsignedRandomNumber)
+        } while randomNumber == previousRandomIndex
+        
+        return images[randomNumber]
+    }
+
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
@@ -40,7 +58,7 @@ class Register: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        background.image = UIImage(named: randomImages()) 
         
         email.text = String()
         password.text = String()
