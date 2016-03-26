@@ -21,6 +21,8 @@ class StartScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var insertgoal: UITextField!
     
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tag.hidden = true
@@ -45,6 +47,13 @@ class StartScreen: UIViewController, UITextFieldDelegate {
        insertgoal.hidden = false
         ScrollView.hidden = false
        ScrollView.setContentOffset(CGPoint(x: 0, y: 175), animated: true)
+        let lightBlur = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+        let blurView = UIVisualEffectView(effect: lightBlur)
+        
+        blurView.frame = imageView.bounds
+        imageView.addSubview(blurView)
+    
+        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
@@ -52,6 +61,9 @@ class StartScreen: UIViewController, UITextFieldDelegate {
        insertgoal.hidden = true
         ScrollView.hidden = true 
         ScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        for view in self.imageView.subviews{
+            view.removeFromSuperview()
+        }
     }
 
 

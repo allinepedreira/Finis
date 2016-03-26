@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2Qm-Tf-sEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j8e-bE-bfh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -527,16 +527,6 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4C1-9a-Lbg">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.53045744289999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="148" y="212" width="104" height="78"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-S7-ErE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button" image="buttonAdd"/>
@@ -558,6 +548,22 @@
                                     <outlet property="delegate" destination="CRZ-Cd-VBv" id="AwQ-jM-nmG"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4C1-9a-Lbg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.53045744289999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="148" y="261" width="104" height="78"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mwu-dB-kUD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="307"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -573,9 +579,10 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="52W-vC-dhZ"/>
-                                <exclude reference="4C1-9a-Lbg"/>
                                 <exclude reference="h2s-S7-ErE"/>
                                 <exclude reference="6Rm-UH-L9t"/>
+                                <exclude reference="4C1-9a-Lbg"/>
+                                <exclude reference="mwu-dB-kUD"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ZU9-DV-JT6"/>
@@ -587,9 +594,10 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="52W-vC-dhZ"/>
-                                <include reference="4C1-9a-Lbg"/>
                                 <include reference="h2s-S7-ErE"/>
                                 <include reference="6Rm-UH-L9t"/>
+                                <include reference="4C1-9a-Lbg"/>
+                                <include reference="mwu-dB-kUD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="ZU9-DV-JT6"/>
@@ -603,6 +611,7 @@
                     <connections>
                         <outlet property="ScrollView" destination="52W-vC-dhZ" id="nim-RZ-fwd"/>
                         <outlet property="addgoal" destination="6Rm-UH-L9t" id="8yG-mM-mu4"/>
+                        <outlet property="imageView" destination="mwu-dB-kUD" id="BNn-pC-lke"/>
                         <outlet property="insertgoal" destination="b7L-Gt-hHe" id="DhQ-zr-OTl"/>
                         <outlet property="tag" destination="Wmv-Fo-ow2" id="h2f-Zu-lDb"/>
                     </connections>
@@ -639,6 +648,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="3U6-bm-VZX"/>
         <segue reference="9na-ls-78O"/>
-        <segue reference="18t-TS-8as"/>
+        <segue reference="QqT-tu-zjH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -125,6 +125,7 @@ class Register: UIViewController, UITextFieldDelegate {
         }
     
     }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "registercomp" {
