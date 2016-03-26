@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Login: UIViewController {
+class Login: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var text1: UITextField!
@@ -23,6 +23,9 @@ class Login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.text1.delegate = self
+        self.text2.delegate = self
+        
         text1.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
         text2.setValue(UIColor(red: CGFloat(247.0/255.0), green: CGFloat(247.0/255.0), blue: CGFloat(247.0/255.0), alpha: CGFloat(1.0)), forKeyPath: "_placeholderLabel.textColor")
 
@@ -34,6 +37,12 @@ class Login: UIViewController {
     }
     
     //MARK: Processamentos
+    
+    //função para o teclado sumir ao apertar o return do keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     @IBAction func login(sender: AnyObject) {
         if shouldPerformSegueWithIdentifier("start", sender:self) == true {
