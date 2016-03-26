@@ -15,11 +15,9 @@ class StartScreen: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tag: UIButton!
     
-    
     @IBOutlet weak var addgoal: UITextField!
   
     @IBOutlet weak var insertgoal: UITextField!
-    
     
     @IBOutlet weak var imageView: UIImageView!
     
