@@ -35,12 +35,12 @@ class Register: UIViewController, UITextFieldDelegate {
         
         return images[randomNumber]
     }
-
     
+    //teclado some quando qualquer lugar da tela é clicado
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
+    //teclado some ao clicar na tecla return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
